@@ -18,7 +18,7 @@ This challenge tests your ability to:
 
 ## 🚀 Live Demo
 
-- 🔗 [View Live Project](#)  
+- 🔗 [View Live Project](https://priyanshu4999.github.io/testimonials-grid-section-main/)  
 - 📄 [Challenge Link](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
 
 ---
