@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{    
+/* colors */
+--purple-50: hsl(260, 100%, 95%);
+--purple-300: hsl(264, 82%, 70%);
+--purple-500: hsl(263, 55%, 52%);
+
+--white: hsl(0, 0%, 100%);
+--grey-100: hsl(214, 17%, 92%);
+--grey-200: hsl(0, 0%, 81%);
+--grey-400: hsl(224, 10%, 45%);
+--grey-500: hsl(217, 19%, 35%);
+--dark-blue: hsl(219, 29%, 14%);
+--black: hsl(0, 0%, 7%);
+/* font */
+--font-family: 'Barlow Semi Condensed', sans-serif;
+--font-weight-semibold : 600;
+--font-weight-medium : 500;
+--font-size-s : 0.6875rem;
+--font-size-m : 0.8125rem;
+--font-size-l : 1.25rem;
+--line-height-110 : 110%;
+--line-height-120 : 120%;
+--line-height-140 : 140%;
+/* spaceing */
+--space-500 :2.5rem; 
+--space-400:2rem;
+--space-300 : 1.5rem;
+--space-200 : 1rem;
+--space-100 : 0.5rem;
+--space-50 : 0.25rem;
+/* media */
+--mobile-width : 23.4375rem;
+--tablet-width : 48rem;
+--desktop-width : 90rem;
+/* border */
+--border-radius-circle : 50%;
+--border-radius-s : 0.5rem;
+
+/* media updates */
+/* grid paddings */
+--grid-padding-inline : max(var(--space-400), 1vw);
+--grid-padding-block : max(calc(2*var(--space-400)), 2.8vh);
+
+}
+
+
+
+
+.text__format-1{
+    font-family: var(--font-family);
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-120);
+    letter-spacing: 0rem;
+    font-weight: 600;
+}
+
+.text__format-2{
+    font-family: var(--font-family);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-140);
+    letter-spacing: 0rem;
+    font-weight: 500;
+}
+.text__format-3{
+    font-family: var(--font-family);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-120);
+    letter-spacing: 0rem;
+    font-weight: 500;
+}
+.text__format-4{
+    font-family: var(--font-family);
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-110);
+    letter-spacing: 0rem;
+    font-weight: 500;
+}
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+body{
+    background: var(--grey-100);
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 24rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "card-1"
+    "card-2"
+    "card-3"
+    "card-4"
+    "card-5";
+    padding-inline: var(--grid-padding-inline);
+    padding-block: var(--grid-padding-block);
+    
+}
+
+.grid__area--1{
+    grid-area: card-1;
+}
+.grid__area--2{
+    grid-area: card-2;
+}
+.grid__area--3{
+    grid-area: card-3;
+}
+.grid__area--4{
+    grid-area: card-4;
+}
+.grid__area--5{
+    grid-area: card-5;
+}
+
+.card{
+    margin: var(--space-200);
+    padding: var(--space-200);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: var(--border-radius-s);
+    box-shadow: 3rem 3rem 2rem 0rem var(--grey-200);
+}
+
+.card:hover{
+    
+    transition: background-position 1s ease-in-out,
+                box-shadow 0.8s ease-in-out;
+    background-position: left top;
+    box-shadow: 0.25rem 0.25rem 0.5rem 0rem var(--black),
+                2rem 2rem 2rem 0rem var(--grey-200);
+                
+}
+.card__profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.card__profile-head{
+    margin-block: var(--space-50);
+}
+.card__img{
+    border: 0.25rem solid;
+    border-radius: 50%;
+    scale: 50%;
+}
+.card__comment{
+    margin-inline: var(--space-200);
+    margin-bottom: var(--space-200);
+}
+.card__p2{
+    margin-block: var(--space-200);
+}
+.card--1{ 
+    color: var(--white);
+    background: var(--purple-500);
+}
+
+.card__h1--1 {color : var(--white);}
+.card__h2--1 {color : var(--purple-50);}
+.card__p1--1 {color : var(--white);}
+.card__p2--1 {color :var(--purple-50);}
+.card__img--1 {border-color: var(--purple-300);}
+
+.card--2{ 
+    color: var(--white);
+    background: var(--grey-500);
+}
+.card__h1--2{color : var(--white);}
+.card__h2--2{color : var(--grey-100);}
+.card__p1--2{color : var(--white);}
+.card__p2--2{color : var(--grey-100);}
+.card__img--2 {border-color: var(--grey-500);}
+
+.card--3,
+.card--5{ 
+    color: var(--grey-500);
+    background: var(--white);
+}
+
+.card__h1--3,.card__h1--5 {color : var(--grey-500);}
+.card__h2--3,.card__h2--5 {color : var(--grey-400);}
+.card__p1--3,.card__p1--5 {color : var(--grey-500);}
+.card__p2--3,.card__p2--5 {color : var(--grey-400);}
+.card__img--3,.card__img--5 {border-color: var(--white);}
+
+.card--4{ 
+    color: var(--white);
+    background: var(--dark-blue);
+}
+.card__h1--4{color : var(--white);}
+.card__h2--4{color : var(--white);}
+.card__p1--4{color : var(--grey-200);}
+.card__p2--4{color : var(--grey-100);}
+.card__img--4 {border-color: var(--purple-500);}
+@media (min-width : 768px){
+    :root{
+        --grid-padding-inline : max(3.75rem , 7.8vw);
+        --grid-padding-block : max(5.2rem , 7.7vh);
+        --svg-padding : right 10rem top;
+
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-areas:
+        "card-1 card-1"
+        "card-2 card-3"
+        "card-4 card-4" 
+        "card-5 card-5" ;
+        padding-inline: var(--grid-padding-inline);
+        padding-block: var(--grid-padding-block);
+        
+    }
+    .card--1{ 
+        color: var(--white);
+        background: var(--purple-500);
+        background-image: url('./images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: var(--svg-padding);
+    }
+
+
+}
+
+@media (min-width : 1440px){
+    :root{
+        --grid-padding-inline : max(10.4rem , 11.4vw);
+        --grid-padding-block : max(14.5rem , 22vh);
+
+        --svg-padding : right 3rem top;
+
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "card-1 card-1 card-2 card-5"
+        "card-3 card-4 card-4 card-5" ;
+        padding-inline: var(--grid-padding-inline);
+        padding-block: var(--grid-padding-block);
+        
+    }
+    .card--1{ 
+        color: var(--white);
+        background: var(--purple-500);
+        background-image: url('./images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: var(--svg-padding);
+    }
+
+}

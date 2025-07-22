@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    background-color: beige;
+    
+}
+
+body{
+    padding: 10px;
+}
+
+.card{
+    background: gray;
+    color: white;
+    padding: 10px;
+    max-width:none;
+    word-break: break-all;
+    hyphens: auto;
+    border: 5px solid black;
+    box-shadow: inset 0 0 1rem 0 black;
+    
+}
+
+.card:hover{
+    background: #333;
+}
+
+.grid{
+    border: 5px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(6 , auto );
+    
+    grid-gap : 10px;
+}
+
+.card--7{
+    grid-column: span 4;
+}
+.card--6{
+    grid-row: span 4;
+}   
+.card--8{
+    grid-row: span 2;
+}
+
+.card--13{
+    grid-column: span 4;
+}
+.card--14{
+    grid-row: span 2;
+}
