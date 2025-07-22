@@ -161,7 +161,7 @@ body{
     margin-bottom: var(--space-200);
 }
 .card__p2{
-    margin-block: var(--space-200);
+    margin-block: var(--space-100);
 }
 .card--1{ 
     color: var(--white);
